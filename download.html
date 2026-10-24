@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download – ClickTracker</title>
+  <meta name="description" content="ClickTracker für Windows 10 und 11 herunterladen und installieren.">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Hauptnavigation">
+    <a class="brand" href="index.html"><img src="img/logo.png" alt="">ClickTracker</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Übersicht</a></li>
+      <li><a href="funktionen.html">Funktionen</a></li>
+      <li><a href="download.html" aria-current="page">Download</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm nav-cta" data-installer-link href="download.html">Herunterladen</a>
+    <button class="menu-toggle" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero" style="padding-bottom:110px">
+    <div class="container">
+      <img class="app-icon" src="img/logo.png" alt="ClickTracker-Logo">
+      <h1 class="headline-l reveal">ClickTracker <span data-installer-version></span></h1>
+      <p class="intro reveal d1">Für Windows 10 (ab Version 2004) und Windows 11, 64-Bit.<br>Eine einzige Datei – alles Nötige ist dabei.</p>
+      <div class="actions reveal d2">
+        <a class="btn btn-primary btn-lg" data-installer-link aria-disabled="true">Herunterladen</a>
+      </div>
+      <div class="dl-meta reveal d2">
+        <span data-hide-empty hidden><code data-installer-file></code></span>
+        <span data-hide-empty hidden><span data-installer-size></span></span>
+        <span data-hide-empty hidden><span data-installer-date></span></span>
+      </div>
+      <div class="note warn reveal" data-installer-missing hidden style="max-width:640px;margin:40px auto 0">
+        <b>Kein Installer gefunden.</b> Setup-Datei in den Ordner <code>website/downloads/</code> legen und in <code>config.js</code> prüfen, welche Datei eingetragen ist.
+      </div>
+    </div>
+  </section>
+
+  <!-- Was ist dabei -->
+  <section class="section gray">
+    <div class="container">
+      <div class="section-head center reveal">
+        <h2 class="headline-m">Installieren. Fertig.</h2>
+        <p class="intro">Auf dem PC muss nichts vorinstalliert sein. Der Assistent spricht Deutsch, Englisch, Französisch oder Italienisch – passend zur Windows-Sprache.</p>
+      </div>
+      <div class="columns">
+        <div class="list-tile reveal">
+          <h3>Installation</h3>
+          <ul>
+            <li>Für alle Benutzer unter „Programme“</li>
+            <li>Oder „nur für mich“ – ohne Admin-Rechte</li>
+            <li>Startmenü-Eintrag, Desktop-Verknüpfung optional</li>
+            <li>Auf Wunsch Start mit Windows</li>
+          </ul>
+        </div>
+        <div class="list-tile reveal d1">
+          <h3>Alles enthalten</h3>
+          <ul>
+            <li>.NET ist eingebaut</li>
+            <li>Vorhandenes Python ab 3.10 wird verwendet</li>
+            <li>Sonst wird die neueste Python-Version installiert</li>
+            <li>Export-Pakete kommen aus dem Installer – ohne Internet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schritte -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <h2 class="headline-m">In vier Schritten startklar.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="step-n">01</div><h3>Herunterladen</h3><p>Die Setup-Datei über den Knopf oben speichern.</p></div>
+        <div class="step reveal d1"><div class="step-n">02</div><h3>Ausführen</h3><p>Doppelklick auf die Datei im Download-Ordner.</p></div>
+        <div class="step reveal d2"><div class="step-n">03</div><h3>Installieren</h3><p>„Für alle“ oder „nur für mich“ wählen und den Assistenten durchklicken.</p></div>
+        <div class="step reveal d3"><div class="step-n">04</div><h3>Loslegen</h3><p>ClickTracker im Startmenü öffnen und die erste Aufnahme starten.</p></div>
+      </div>
+      <div class="note reveal" style="margin-top:64px">
+        <b>Windows meldet „Unbekannter Herausgeber“?</b> Das passiert, solange der Installer nicht mit einem offiziellen Zertifikat signiert ist. Auf „Weitere Informationen“ und dann „Trotzdem ausführen“ klicken. Weil ClickTracker global auf Tastatur und Maus hört, kann auch ein Virenscanner nachfragen.
+      </div>
+    </div>
+  </section>
+
+  <!-- Für die IT -->
+  <section class="section gray">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Für die IT</p>
+        <h2 class="headline-m">Stille Installation.</h2>
+        <p class="intro">Für Softwareverteilung wie Intune oder Software-Center. Exit-Code 0 bedeutet erfolgreich.</p>
+      </div>
+      <div class="code reveal d1" style="background:#fff">
+        <button class="copy-btn" type="button">Kopieren</button>
+<pre><span class="c"># für alle Benutzer (Admin)</span>
+<span data-installer-file>ClickTracker-Setup.exe</span> /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+
+<span class="c"># nur für mich</span>
+<span data-installer-file>ClickTracker-Setup.exe</span> /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /CURRENTUSER
+
+<span class="c"># ohne Autostart</span>
+<span data-installer-file>ClickTracker-Setup.exe</span> /VERYSILENT /TASKS="!autostart"
+
+<span class="c"># deinstallieren</span>
+"C:\Program Files\ClickTracker\unins000.exe" /VERYSILENT /SUPPRESSMSGBOXES</pre>
+      </div>
+      <p class="fine reveal" style="margin-top:20px">Beim Deinstallieren bleiben die eigenen Einstellungen und Anleitungen standardmässig erhalten. Python bleibt installiert, weil es ein eigenständiges Programm ist.</p>
+    </div>
+  </section>
+
+  <!-- Ältere Versionen (wird automatisch gefüllt) -->
+  <section class="section tight" data-older-versions hidden>
+    <div class="container narrow">
+      <h2 class="headline-s" style="margin-bottom:28px">Ältere Versionen</h2>
+      <ul class="versions"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="top">ClickTracker läuft vollständig lokal auf deinem PC. Programmiert am Zentralhack 2026 von Lean Peter, Tim Lauber, Lukas Scheidegger und Ibrahim Amin.</p>
+    <div class="bottom">
+      <span>© <span data-year>2026</span> Team ClickTracker</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Übersicht</a></li>
+        <li><a href="funktionen.html">Funktionen</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
